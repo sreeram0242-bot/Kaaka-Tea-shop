@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAAKA TEA SHOP | Artisan Tea Lounge & Spiced Chai Boutique</title>
+  <meta name="description" content="Welcome to KAAKA TEA SHOP. Experience authentic Karak Chai, ceremonial green teas, hand-crafted herbal infusions, boba lattes & fresh tea pairings.">
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="#home" class="brand-logo">
+        <i class="fas fa-mug-hot"></i>
+        <span>KAAKA TEA</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#menu" class="nav-link">Tea Menu</a></li>
+        <li><a href="#builder" class="nav-link">Craft Brew</a></li>
+        <li><a href="#quiz" class="nav-link">Flavor Quiz</a></li>
+        <li><a href="#timer" class="nav-link">Steeping Timer</a></li>
+        <li><a href="#about" class="nav-link">Our Story</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+
+        <button id="reserve-table-btn" class="btn btn-secondary btn-sm">
+          <i class="fas fa-calendar-alt"></i> Reserve Table
+        </button>
+
+        <div class="cart-btn-wrap">
+          <button id="cart-btn" class="btn btn-primary btn-sm btn-icon" title="View Cart">
+            <i class="fas fa-shopping-bag"></i>
+          </button>
+          <span id="cart-badge" class="cart-badge">0</span>
+        </div>
+
+        <button id="mobile-toggle" class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-leaf"></i> Artisanal Tea & Spiced Chai Lounge
+        </div>
+        <h1 class="hero-title">Savor the <span>Heritage</span> in Every Steep</h1>
+        <p class="hero-desc">
+          Step into KAAKA TEA SHOP. From authentic Kashmiri Saffron Karak Chai to Uji Ceremonial Matcha and blooming jasmine infusions, experience hand-brewed perfection.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#menu" class="btn btn-primary">
+            <i class="fas fa-utensils"></i> Explore Menu
+          </a>
+          <a href="#builder" class="btn btn-secondary">
+            <i class="fas fa-blender"></i> Custom Tea Builder
+          </a>
+          <a href="#quiz" class="btn btn-outline">
+            <i class="fas fa-wand-magic-sparkles"></i> Take Tea Quiz
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>45+</h3>
+            <p>Artisan Blends</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Organic Spices</p>
+          </div>
+          <div class="stat-item">
+            <h3>50K+</h3>
+            <p>Tea Lovers Served</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-image-wrapper">
+          <img src="assets/hero.png" alt="Steaming Karak Chai at Kaaka Tea Shop">
+        </div>
+        <div class="floating-badge">
+          <div class="floating-badge-icon">
+            <i class="fas fa-crown"></i>
+          </div>
+          <div class="floating-badge-text">
+            <h4>Kaaka Karak Chai</h4>
+            <p>Infused with Green Cardamom & Saffron</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEA FLAVOR MATCHING QUIZ -->
+  <section id="quiz" class="quiz-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Personalized Recommendation</span>
+        <h2 class="section-title">Tea Flavor Matcher</h2>
+        <p class="section-description">Unsure what to order? Answer 3 quick questions to discover your ideal tea infusion.</p>
+      </div>
+
+      <div class="quiz-card">
+        <div class="quiz-progress">
+          <div class="progress-bar-step active"></div>
+          <div class="progress-bar-step"></div>
+          <div class="progress-bar-step"></div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="quiz-step active" data-step="1">
+          <h3 class="quiz-question">What vibe or feeling are you seeking right now?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option-btn">
+              <i class="fas fa-bolt"></i>
+              <span>Energy & Focus</span>
+              <p>Rich, bold caffeine boost with milk and spices</p>
+            </button>
+            <button class="quiz-option-btn">
+              <i class="fas fa-spa"></i>
+              <span>Calm & Relaxation</span>
+              <p>Soothing floral herbs with zero caffeine</p>
+            </button>
+            <button class="quiz-option-btn">
+              <i class="fas fa-snowflake"></i>
+              <span>Cool Refreshment</span>
+              <p>Iced, fruity, or cream layered boba tea</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="quiz-step" data-step="2">
+          <h3 class="quiz-question">Which tea base profile do you prefer?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option-btn">
+              <i class="fas fa-mug-hot"></i>
+              <span>Spiced & Creamy Milk Tea</span>
+              <p>Robust CTC Assam leaves boiled with rich milk</p>
+            </button>
+            <button class="quiz-option-btn">
+              <i class="fas fa-leaf"></i>
+              <span>Delicate Green or White Tea</span>
+              <p>Light, grassy, and floral antioxidant blends</p>
+            </button>
+            <button class="quiz-option-btn">
+              <i class="fas fa-seedling"></i>
+              <span>Herbal & Berry Infusions</span>
+              <p>Sweet, tangy hibiscus and mint herbal leaves</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="quiz-step" data-step="3">
+          <h3 class="quiz-question">How do you take your sweetness?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option-btn">
+              <i class="fas fa-cube"></i>
+              <span>Rich Honey & Jaggery</span>
+              <p>Warm traditional sweetness</p>
+            </button>
+            <button class="quiz-option-btn">
+              <i class="fas fa-feather"></i>
+              <span>Subtle / Light Sugar</span>
+              <p>Gentle sweetness to highlight raw tea notes</p>
+            </button>
+            <button class="quiz-option-btn">
+              <i class="fas fa-ban"></i>
+              <span>Unsweetened / Pure</span>
+              <p>100% natural, crisp, zero added sugars</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Result Box -->
+        <div id="quiz-result-box" class="quiz-result-box">
+          <img src="assets/karak.png" alt="Quiz Result Tea" class="quiz-result-image">
+          <h3 class="quiz-result-title">Your Perfect Match: Royal Saffron Kulhad Chai</h3>
+          <p class="quiz-result-desc">A velvety blend of Assam tea leaves, crushed green cardamom, and rich Kashmiri saffron, served warm in a traditional earthen pot.</p>
+          <div style="display: flex; justify-content: center; gap: 1rem;">
+            <a href="#menu" class="btn btn-primary"><i class="fas fa-plus"></i> View Item in Menu</a>
+            <button id="retake-quiz-btn" class="btn btn-secondary"><i class="fas fa-rotate"></i> Retake Quiz</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Crafted With Passion</span>
+        <h2 class="section-title">KAAKA Tea Menu</h2>
+        <p class="section-description">Discover our handcrafted hot chais, rare whole-leaf green teas, iced boba favorites & tea pairings.</p>
+      </div>
+
+      <div class="menu-controls">
+        <div class="menu-search">
+          <i class="fas fa-search"></i>
+          <input type="text" id="menu-search-input" placeholder="Search chais, matcha, herbal teas...">
+        </div>
+
+        <div class="menu-categories">
+          <button class="cat-btn active" data-cat="all">All Items</button>
+          <button class="cat-btn" data-cat="chais">Signature Chais</button>
+          <button class="cat-btn" data-cat="green">Green & White</button>
+          <button class="cat-btn" data-cat="herbal">Herbal & Floral</button>
+          <button class="cat-btn" data-cat="iced">Iced & Boba</button>
+          <button class="cat-btn" data-cat="snacks">Tea Snacks</button>
+        </div>
+      </div>
+
+      <div id="menu-grid" class="menu-grid">
+        <!-- Dynamically rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOM TEA BUILDER SECTION -->
+  <section id="builder" class="builder-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Interactive Brew Lab</span>
+        <h2 class="section-title">Craft Your Custom Brew</h2>
+        <p class="section-description">Customize your tea base, milk preference, hand-ground spices, and gourmet toppings to create your signature beverage.</p>
+      </div>
+
+      <div class="builder-layout">
+        <div class="builder-steps">
+          <!-- Step 1: Base -->
+          <div class="builder-step-group">
+            <div class="builder-step-title">
+              <i class="fas fa-mug-hot"></i> Step 1: Pick Tea Base
+            </div>
+            <div class="option-grid">
+              <div class="builder-opt opt-base selected" data-name="Assam Royal Karak" data-price="4.50" data-color="#8b4513">Assam Karak ($4.50)</div>
+              <div class="builder-opt opt-base" data-name="Jasmine Green Tea" data-price="4.25" data-color="#4a7c59">Jasmine Green ($4.25)</div>
+              <div class="builder-opt opt-base" data-name="South African Rooibos" data-price="4.00" data-color="#a04000">Rooibos ($4.00)</div>
+              <div class="builder-opt opt-base" data-name="Uji Matcha Base" data-price="5.00" data-color="#2e7d32">Uji Matcha ($5.00)</div>
+            </div>
+          </div>
+
+          <!-- Step 2: Milk -->
+          <div class="builder-step-group">
+            <div class="builder-step-title">
+              <i class="fas fa-glass-water"></i> Step 2: Choose Milk Type
+            </div>
+            <div class="option-grid">
+              <div class="builder-opt opt-milk selected" data-name="Full Cream Milk" data-price="0.50">Full Cream ($0.50)</div>
+              <div class="builder-opt opt-milk" data-name="Oat Milk" data-price="0.85">Oat Milk ($0.85)</div>
+              <div class="builder-opt opt-milk" data-name="Almond Milk" data-price="0.75">Almond Milk ($0.75)</div>
+              <div class="builder-opt opt-milk" data-name="Condensed Milk" data-price="0.60">Condensed ($0.60)</div>
+            </div>
+          </div>
+
+          <!-- Step 3: Spice & Flavor -->
+          <div class="builder-step-group">
+            <div class="builder-step-title">
+              <i class="fas fa-pepper-hot"></i> Step 3: Signature Spice Blend
+            </div>
+            <div class="option-grid">
+              <div class="builder-opt opt-spice selected" data-name="Cardamom & Saffron" data-price="0.75">Cardamom & Saffron ($0.75)</div>
+              <div class="builder-opt opt-spice" data-name="Ginger & Cinnamon" data-price="0.50">Ginger & Cinnamon ($0.50)</div>
+              <div class="builder-opt opt-spice" data-name="Star Anise & Clove" data-price="0.60">Royal Masala ($0.60)</div>
+              <div class="builder-opt opt-spice" data-name="Vanilla Bean" data-price="0.70">Vanilla Bean ($0.70)</div>
+            </div>
+          </div>
+
+          <!-- Step 4: Toppings -->
+          <div class="builder-step-group">
+            <div class="builder-step-title">
+              <i class="fas fa-cookie-bite"></i> Step 4: Add Toppings (Optional)
+            </div>
+            <div class="option-grid">
+              <div class="builder-opt opt-topping" data-name="Tapioca Boba Pearls" data-price="0.75">Boba Pearls (+$0.75)</div>
+              <div class="builder-opt opt-topping" data-name="Crushed Pistachios" data-price="0.90">Crushed Pistachio (+$0.90)</div>
+              <div class="builder-opt opt-topping" data-name="Salty Cheese Foam" data-price="1.00">Cheese Foam (+$1.00)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary Sticky Card -->
+        <div class="builder-summary-card">
+          <div class="cup-visualizer">
+            <div class="cup-steam">
+              <span></span><span></span><span></span>
+            </div>
+            <div id="cup-liquid" class="cup-liquid"></div>
+          </div>
+
+          <h3 style="font-family: var(--font-heading); font-size: 1.5rem;">Your Custom Brew</h3>
+          <div id="builder-price-val" class="builder-price">$5.75</div>
+
+          <ul class="summary-list">
+            <li><span>Base:</span> <strong id="summary-base">Assam Royal Karak</strong></li>
+            <li><span>Milk:</span> <strong id="summary-milk">Full Cream Milk</strong></li>
+            <li><span>Spices:</span> <strong id="summary-spice">Cardamom & Saffron</strong></li>
+            <li><span>Toppings:</span> <strong id="summary-toppings">None</strong></li>
+          </ul>
+
+          <button id="add-custom-brew-btn" class="btn btn-primary" style="width: 100%;">
+            <i class="fas fa-shopping-bag"></i> Add Custom Brew to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEEPING TIMER UTILITY -->
+  <section id="timer" class="timer-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Master Your Steep</span>
+        <h2 class="section-title">Interactive Steeping Timer</h2>
+        <p class="section-description">Brew tea like a tea master. Select your tea variety below and start the countdown timer.</p>
+      </div>
+
+      <div class="timer-wrapper">
+        <div class="timer-presets">
+          <button class="timer-preset-btn" data-seconds="120">White Tea (2 min)</button>
+          <button class="timer-preset-btn active" data-seconds="180">Green Tea (3 min)</button>
+          <button class="timer-preset-btn" data-seconds="240">Oolong Tea (4 min)</button>
+          <button class="timer-preset-btn" data-seconds="300">Karak Chai (5 min)</button>
+          <button class="timer-preset-btn" data-seconds="360">Herbal Infusion (6 min)</button>
+        </div>
+
+        <div id="timer-ring" class="timer-display-ring">
+          <span id="timer-digits" class="timer-digits">03:00</span>
+          <span class="timer-label">Steeping Time</span>
+        </div>
+
+        <div class="timer-controls">
+          <button id="timer-start-btn" class="btn btn-primary">
+            <i class="fas fa-play"></i> Start
+          </button>
+          <button id="timer-reset-btn" class="btn btn-secondary">
+            <i class="fas fa-redo"></i> Reset
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT & HERITAGE -->
+  <section id="about" class="about-section">
+    <div class="container about-grid">
+      <div class="about-content">
+        <span class="section-subtitle">Our Heritage</span>
+        <h2 class="section-title">The KAAKA Story</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+          Founded with a commitment to authenticity and innovation, KAAKA TEA SHOP brings together traditional clay kulhad tea brewing and modern artisanal tea mixology. 
+        </p>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">
+          We ethically source our single-estate leaves directly from high-altitude tea gardens in Assam, Fujian, and Kerala, crushing whole spices in-house every morning to deliver unmatched flavor and aroma.
+        </p>
+
+        <div class="about-features">
+          <div class="feature-box">
+            <i class="fas fa-leaf"></i>
+            <h4>Whole Leaf Quality</h4>
+            <p>No artificial dust or additives. Only hand-picked whole tea leaves.</p>
+          </div>
+          <div class="feature-box">
+            <i class="fas fa-mortar-pestle"></i>
+            <h4>Hand-Ground Spices</h4>
+            <p>Cardamom, ginger, and saffron crushed daily in mortar & pestle.</p>
+          </div>
+          <div class="feature-box">
+            <i class="fas fa-earth-americas"></i>
+            <h4>Eco-Friendly Kulhads</h4>
+            <p>Served in handcrafted biodegradable clay pots for authentic earthy aroma.</p>
+          </div>
+          <div class="feature-box">
+            <i class="fas fa-heart"></i>
+            <h4>Community Lounge</h4>
+            <p>A welcoming cozy ambient space to relax, work, and enjoy tea time.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-media">
+        <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--surface-glass-border); box-shadow: var(--shadow-lg);">
+          <img src="assets/karak.png" alt="Clay Kulhad Chai at Kaaka Tea Shop">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">What Tea Lovers Say</span>
+        <h2 class="section-title">Customer Reviews</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"The Saffron Kulhad Chai at KAAKA is unmatched. The aroma of crushed cardamom and authentic clay pot flavor takes me straight home!"</p>
+          <div class="review-user">
+            <div class="avatar">AK</div>
+            <div>
+              <h4 style="font-size: 1rem;">Aisha Khan</h4>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Verified Visitor</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"I love the interactive Custom Tea Builder on their site! Creating my own oat milk matcha with cheese foam and ordering online was super smooth."</p>
+          <div class="review-user">
+            <div class="avatar">MR</div>
+            <div>
+              <h4 style="font-size: 1rem;">Marcus Reed</h4>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Regular Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"The Blooming Jasmine Dragon Pearls paired with their crispy samosas is the best afternoon tea ritual in town. 10/10 recommended!"</p>
+          <div class="review-user">
+            <div class="avatar">PS</div>
+            <div>
+              <h4 style="font-size: 1rem;">Priya Sharma</h4>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Tea Connoisseur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="brand-logo" style="margin-bottom: 1rem;">
+          <i class="fas fa-mug-hot"></i>
+          <span>KAAKA TEA SHOP</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+          Authentic Artisan Tea Boutique & Spiced Chai Lounge. Celebrating craftsmanship in every single steep.
+        </p>
+        <div style="display: flex; gap: 1rem; color: var(--primary); font-size: 1.2rem;">
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Tea Menu</a></li>
+          <li><a href="#builder">Craft Your Brew</a></li>
+          <li><a href="#quiz">Flavor Quiz</a></li>
+          <li><a href="#timer">Steeping Timer</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Mon - Fri: 7:00 AM - 10:00 PM</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Sat - Sun: 8:00 AM - 11:00 PM</p>
+        <p style="color: var(--primary); font-size: 0.9rem; font-weight: 600; margin-top: 1rem;">Location: 42 Chai Street, Garden District</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Join Kaaka Tea Club</h4>
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Subscribe to receive secret tea recipes and 10% off your first order!</p>
+        <form style="display: flex; gap: 0.5rem;" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Kaaka Tea Club!');">
+          <input type="email" placeholder="Your email..." required style="padding: 0.6rem 1rem; border-radius: var(--radius-full); border: 1px solid var(--surface-glass-border); background: var(--bg-card); color: #fff; width: 100%; font-size: 0.85rem;">
+          <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 KAAKA TEA SHOP. All Rights Reserved. Designed with passion for Tea Lovers everywhere.</p>
+    </div>
+  </footer>
+
+  <!-- SLIDE-OUT CART DRAWER -->
+  <div id="cart-drawer-overlay" class="cart-drawer-overlay">
+    <div class="cart-drawer">
+      <div class="cart-header">
+        <h3><i class="fas fa-shopping-bag" style="color: var(--primary);"></i> Your Tea Basket</h3>
+        <button id="cart-close-btn" class="cart-close-btn">&times;</button>
+      </div>
+
+      <div id="cart-items-container" class="cart-body">
+        <!-- Rendered via JS -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-subtotal">
+          <span>Total:</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <button id="checkout-trigger-btn" class="btn btn-primary" style="width: 100%;">
+          Proceed to Checkout <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESERVATION MODAL -->
+  <div id="reservation-modal" class="modal-overlay">
+    <div class="modal-box">
+      <button id="reserve-close-btn" class="modal-close">&times;</button>
+      <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.5rem;">Reserve a Tea Table</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Book a cozy lounge table or private tea ceremony at KAAKA TEA SHOP.</p>
+
+      <form id="reservation-form">
+        <div class="form-group">
+          <label for="res-name">Full Name</label>
+          <input type="text" id="res-name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="res-email">Email Address</label>
+          <input type="email" id="res-email" placeholder="john@example.com" required>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label for="res-date">Date</label>
+            <input type="date" id="res-date" required>
+          </div>
+          <div class="form-group">
+            <label for="res-time">Time</label>
+            <input type="time" id="res-time" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="res-guests">Number of Guests</label>
+          <select id="res-guests">
+            <option value="1">1 Person (Quiet Tea Space)</option>
+            <option value="2" selected>2 Persons (Cozy Date)</option>
+            <option value="4">4 Persons (Tea Party)</option>
+            <option value="6">6+ Persons (Private Ceremony)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Confirm Table Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div id="checkout-modal" class="modal-overlay">
+    <div class="modal-box">
+      <button id="checkout-close-btn" class="modal-close">&times;</button>
+      <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.5rem;">Checkout & Delivery</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Complete your order details below.</p>
+
+      <form id="checkout-form">
+        <div class="form-group">
+          <label for="cust-name">Customer Name</label>
+          <input type="text" id="cust-name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="cust-phone">Phone Number</label>
+          <input type="tel" id="cust-phone" placeholder="+1 (555) 000-0000" required>
+        </div>
+        <div class="form-group">
+          <label for="order-type">Order Type</label>
+          <select id="order-type">
+            <option value="pickup">Store Pickup (42 Chai Street)</option>
+            <option value="delivery">Local Express Delivery</option>
+            <option value="dinein">Dine-in at Table</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cust-address">Delivery Address / Table #</label>
+          <input type="text" id="cust-address" placeholder="Address or Table Number" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Place Order Now</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- DIGITAL RECEIPT CONFIRMATION MODAL -->
+  <div id="receipt-modal" class="modal-overlay">
+    <div class="modal-box" style="text-align: center;">
+      <button id="receipt-close-btn" class="modal-close">&times;</button>
+      <div style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.5rem;">Order Confirmed!</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Thank you for your order at KAAKA TEA SHOP.</p>
+
+      <div style="background: var(--bg-card); border: 1px dashed var(--primary); padding: 1.5rem; border-radius: var(--radius-md); text-align: left; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--surface-glass-border); padding-bottom: 0.5rem; margin-bottom: 1rem; font-weight: 700;">
+          <span>Receipt ID: <span id="receipt-id">#KAAKA-000</span></span>
+          <span id="receipt-name">Guest</span>
+        </div>
+        <div id="receipt-items" style="margin-bottom: 1rem;"></div>
+        <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 1.1rem; border-top: 1px solid var(--surface-glass-border); padding-top: 0.8rem; color: var(--primary);">
+          <span>Total Paid:</span>
+          <span id="receipt-total">$0.00</span>
+        </div>
+      </div>
+
+      <button onclick="document.getElementById('receipt-modal').classList.remove('active');" class="btn btn-primary" style="width: 100%;">
+        Enjoy Your Tea!
+      </button>
+    </div>
+  </div>
+
+  <!-- JavaScript Application -->
+  <script src="script.js"></script>
+</body>
+</html>
