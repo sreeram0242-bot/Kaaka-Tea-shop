@@ -6,9 +6,9 @@
 
 :root {
   /* Color Palette */
-  --bg-dark: #0a1813;
-  --bg-card: rgba(18, 42, 33, 0.7);
-  --bg-card-hover: rgba(26, 58, 46, 0.85);
+  --bg-dark: #000000;
+  --bg-card: rgba(15, 15, 15, 0.7);
+  --bg-card-hover: rgba(25, 25, 25, 0.85);
   --surface-glass: rgba(255, 255, 255, 0.05);
   --surface-glass-border: rgba(255, 255, 255, 0.12);
   
